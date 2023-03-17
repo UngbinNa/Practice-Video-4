@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 
 public class Exercise01 : Monobehaviour
-{ 
+{
     private void Awake()
     {
         int minutes = 1;
@@ -24,4 +24,15 @@ public class Exercise01 : Monobehaviour
 
         Debug.Log(string.Format("콤마로 구분 : {0:N}", 1234567890));
         Debug.Log(string.Format("지수 : {0:E}", 1234567890));
+
+        //서식 문자열 설정(날짜)
+
+        //DateTime 구조체를 사용하려면 using System 추가
+        DateTime dt = new DateTime(2020, 2, 22, 13, 40, 0);
+        string str = dt.ToString("yyyy-MM-dd tt hh:mm:ss(dddd)");
+        Debug.Log(str);
+
+        str = dt.ToString("yyyy-MM-dd tt hh:mm:ss(dddd)");
+        Debug.Log(str);
     }
+}
