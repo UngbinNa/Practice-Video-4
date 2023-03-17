@@ -4,23 +4,36 @@ public class Exercise01 : MonoBehaviour
 {
     private void Awake()
     {
-        const int PlayerIdle = 0;
-        const int PlayerMove = 1;
-        const int PlayerAttack = 2;
-
-        int playerState = PlayerAttack;
-
-        switch (playerState)
         {
-            case PlayerIdle:
-                Debug.Log("플레이어 상태 : 대기");
-                break;
-            case PlayerMove:
-                Debug.Log("플레이어 상태 : 이동");
-                break;
-            case PlayerAttack:
-                Debug.Log("플레이어 상태 : rhdrur");
-                break;
-        }
+
+    string str = "hello, world";
+    Debug.Log(str);
+
+    str = string.ToLower();
+    Debug.Log($"ToLower() * {str}");    //대문자 -> 소문자
+    str = string.ToUpper();             //소문자 - > 대문자
+    Debug.Log($"ToUpper() * {str}");
+
+    str = string.Insert(0, "Hi ~");     //원하는 위치에 문자열 삽입
+    Debug.Log($"Insert() * {str}");
+
+    str = string.Remove();              //원하는 범위의 문자열 삭제
+    Debug.Log($"Remove() * {str}");
+
+    Debug.Log("== Trim ==");
+        //공백 추가
+
+    str = "     " + str + "     ";
+    Debug.Log(str + "공백 체크"); 
+   
+    str = string.Trim();        //문자열의 앞, 뒤 공백 제거
+    //str = str.trimstart();    //문자열의 앞 공백 제거
+    //str = str.TrimENd();      //문자열의 뒤 공백 제거
+    Debug.Log(str + "공백 체크"); 
+
+    Debug.Log($"Before Replace : {str}");
+    str = string.Replace("Hello", "bye");   //Hello를 bye 문자열로 대체
+    Debug.Log($"After Replace : {str}");
+}
 
 }
