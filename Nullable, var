@@ -1,0 +1,27 @@
+using UnityEngine;
+
+public class Exercise01 : MonoBehaviour
+{ 
+    private void Awake()
+    {
+        //Nullable
+        int? intValue;
+
+        intValue = null;
+        Debug.Log(intValue.HasValue);
+        //DebugLog(invalue.Value)   //현재 intvalue가 null이기 때문에 값을 출력하면 에러 발생
+
+        intValue = 30;
+        Debug.Log(intValue.HasValue);
+        Debug.Log(intValue.Value);
+
+        //var
+
+        var valueInt = 33;
+        var valueFloat = 33.4567f;
+        var valueString = "문자열";
+
+        Debug.Log("정수 : ", valueInt);
+        Debug.Log("실수 : ", valueFloat);
+        Debug.Log("문자열 : ", valueString);
+    }
