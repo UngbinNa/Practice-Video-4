@@ -1,26 +1,21 @@
 using UnityEngine;
+using System;
 
-public class Exercise01 : MonoBehaviour
+public class Exercise01 : Monobehaviour
+
 {
-    private void Awake()
-    {
-        const int PlayerIdle = 0;
-        const int PlayerMove = 1;
-        const int PlayerAttack = 2;
+    string positiong = "3, 5, 6";
+    //split()를 이용해 문자열을 분할하면 분할된 개수만큼 배열에 저장
+    //쉼표를 기준으로 분할
 
-        int playerState = PlayerAttack;
+    string[] str = position.Split(',');
+    Debug.Log($"{str{0}, {str[1]}, {str[2]});
 
-        switch (playerState)
-        {
-            case PlayerIdle:
-                Debug.Log("플레이어 상태 : 대기");
-                break;
-            case PlayerMove:
-                Debug.Log("플레이어 상태 : 이동");
-                break;
-            case PlayerAttack:
-                Debug.Log("플레이어 상태 : rhdrur");
-                break;
-        }
+    string str2 = "Hello, World";
+    // 7번째 위치부터 뒤에 있는 문자열만 다시 저장
+
+    str2 = str2.Substring(7);
+    Debug.Log(str2);
+
 
 }
