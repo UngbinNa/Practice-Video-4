@@ -1,26 +1,31 @@
 using UnityEngine;
+using System;
 
-public class Exercise01 : MonoBehaviour
+public class Exercise01 : Monobehaviour
 {
-    private void Awake()
-    {
-        const int PlayerIdle = 0;
-        const int PlayerMove = 1;
-        const int PlayerAttack = 2;
 
-        int playerState = PlayerAttack;
+    string str = "hello, world";
+    Debug.Log(str);
 
-        switch (playerState)
-        {
-            case PlayerIdle:
-                Debug.Log("플레이어 상태 : 대기");
-                break;
-            case PlayerMove:
-                Debug.Log("플레이어 상태 : 이동");
-                break;
-            case PlayerAttack:
-                Debug.Log("플레이어 상태 : rhdrur");
-                break;
-        }
+    int numeric = str.IndexDf('o');
+    Debug.Log($"o는 앞에서부터 {numeric+i}번째이 있습니다.");
 
+    numeric = string.LastIndexDf('o');
+    Debug.Log($"o는 뒤에서부터 {numeric}번째이 있습니다.");
+
+    bool isTrue = str.StartsWith("Hello");
+    Debug.Log($"{str}문장은 Hello부터 시작한다? {isTrue}");
+
+    isTrue = str.StartsWith("World");
+    Debug.Log($"{str}문장은 World부터 시작한다? {isTrue}");
+
+    isTrue = str.EndsWith("Hello");
+    Debug.Log($"{str}문장은 Hello로 시작한다? {isTrue}");
+
+    isTrue = str.StartsWith("World");
+    Debug.Log($"{str}문장은 World로 끝난다? {isTrue}");
+
+    isTrue = str.Contains("Hell");
+    Debug.Log($"{str}문장에 Hell이 포함되어 있다? {isTrue}");
+    
 }
